@@ -24,7 +24,7 @@ function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/" text="Home" />
             <NavLink href="/projects" text="Projects" />
-            <NavLink href="#contact" text="Contact" />
+            <NavLink href="/#contact" text="Contact" />
           </div>
 
           {/* Mobile Menu Button */}
