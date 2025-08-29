@@ -17,6 +17,7 @@ import RecipeWebAppImage from '@/public/projects-images/recipe-app.png'
 import PortfolioWebImage from '@/public/projects-images/portfolio-web.png'
 import NewsWebAppImage from '@/public/projects-images/news-app.jpg'
 
+
 const projects = [
   {
     id: 1,

@@ -16,8 +16,10 @@ export default function Home() {
   const [text] = useTypewriter({
     words: [
       "Software Engineer",
-      "FullStack Web Developer",
-      "Co Founder At DevBros Technology",
+      "Full-Stack Web Developer",
+      "AI Product Builder with JavaScript",
+      "GenAI Developer",
+      "Co-Founder at DevBros Technology",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -36,13 +38,11 @@ export default function Home() {
         "1lSpYHH3wtwyPOb9v"
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           alert("Message sent successfully!");
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
           alert("Failed to send message. Please try again.");
         }
       );
@@ -59,7 +59,9 @@ export default function Home() {
     { name: "Tailwind CSS", level: 85 },
     { name: "Python", level: 70 },
     { name: "Flask", level: 75 },
-    { name: "Git", level: 80 },
+    { name: "AI Product Building", level: 65 },
+    { name: "GenAI", level: 65 },
+    { name: "Git", level: 60 },
   ];
 
   return (
@@ -123,8 +125,8 @@ export default function Home() {
               <Image
                 src={wafiPic}
                 alt="Wafi Hasan"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -147,8 +149,8 @@ export default function Home() {
               <Image
                 src={wafiImage}
                 alt="Wafi Hasan"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
               />
             </div>
           </motion.div>
@@ -163,18 +165,45 @@ export default function Home() {
           >
             <h1 className="text-4xl font-bold text-white">About Me</h1>
             <p className="text-lg leading-relaxed text-gray-400">
-              As a passionate full-stack web developer, I thrive on turning
-              creative ideas into robust and complete web applications. My
-              expertise spans both the front end, where I craft intuitive and
-              engaging user interfaces with modern tools like Next.js, React,
-              and Tailwind CSS, and the back end, where I build scalable
-              server-side logic and APIs using Node.js, Express, and Python.
+              As a dedicated{" "}
+              <span className="text-white font-semibold">
+                Full-Stack Web Developer
+              </span>{" "}
+              and{" "}
+              <span className="text-white font-semibold">GenAI Enthusiast</span>
+              , I specialize in building modern web applications and AI-powered
+              solutions. My expertise lies in crafting intuitive user interfaces
+              with{" "}
+              <span className="text-white">
+                Next.js, React, and Tailwind CSS
+              </span>
+              , and developing scalable back-end systems using{" "}
+              <span className="text-white">Node.js, Express, and Python</span>.
             </p>
+
             <p className="text-lg leading-relaxed text-gray-400">
-              With a focus on performance and clean code, I build end-to-end
-              solutions that are not only powerful and efficient but also a joy
-              to use. I am always eager to collaborate on projects that solve
-              real-world problems and make a meaningful impact.
+              Beyond traditional web development, I focus on{" "}
+              <span className="text-white font-semibold">
+                AI product development with JavaScript
+              </span>
+              . From integrating Generative AI models into applications to
+              building intelligent automation tools, I strive to deliver
+              solutions that are innovative, practical, and future-ready.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-400">
+              As a{" "}
+              <span className="text-white font-semibold">
+                GenAI Developer with JavaScript
+              </span>{" "}
+              and{" "}
+              <span className="text-white font-semibold">
+                Co-Founder at DevBros Technology
+              </span>
+              , I combine technical expertise with entrepreneurial vision to
+              create products that push the boundaries of what's possible. My
+              goal is to turn ambitious ideas into impactful digital experiences
+              that inspire and empower users.
             </p>
           </motion.div>
         </div>
@@ -225,6 +254,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-24 px-4 bg-gray-900">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-4xl font-bold text-white mb-4">My Services</h1>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              I provide high-quality development services to bring your ideas to
+              life.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Web Development",
+                desc: "Responsive, modern, and scalable web applications built with React, Next.js, and TailwindCSS.",
+              },
+              {
+                title: "Backend & API Development",
+                desc: "Secure and efficient server-side logic and APIs using Express.js, Flask, MongoDB.",
+              },
+              {
+                title: "AI & Automation",
+                desc: "AI-powered applications and chatbots with JavaScript and GenAI APIs, automating workflows without traditional ML frameworks.",
+              },
+            ].map((service, i) => (
+              <motion.div
+                key={service.title}
+                className="bg-gray-800 rounded-2xl shadow-lg text-center p-8 hover:-translate-y-2 hover:shadow-2xl transition-transform"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+ <hr></hr>
       {/* Contact Section */}
       <section className="py-24 px-4 bg-gray-900" id="contact">
         <div className="container mx-auto">
@@ -329,17 +408,20 @@ export default function Home() {
 
               <div className="pt-4">
                 <h3 className="text-xl font-semibold text-white mb-4">
-                  I currently work this company
+                  I currently work at this company
                 </h3>
                 <div className="flex gap-6 items-center">
-                  <a href="https://devbrostechnology.vercel.app">
+                  <a
+                    href="https://devbrostechnology.vercel.app"
+                    target="_blank"
+                  >
                     <Image
                       src={dbtLogo}
                       alt="DevBros Technology Logo"
                       width={40}
                       height={40}
                       className="rounded-full"
-                    ></Image>
+                    />
                   </a>
                 </div>
               </div>
