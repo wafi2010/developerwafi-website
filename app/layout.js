@@ -21,7 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
+    <head>
+          <link rel="icon" href="/logo.png" sizes="any" />
+    </head>
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
       >
         <Navbar/>
