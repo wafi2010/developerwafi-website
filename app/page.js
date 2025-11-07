@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 
 // Import Images
 import wafiPic from "@/public/wafi.jpg";
-import wafiImage from "@/public/wafi-1.jpeg";
+import wafiImage from "@/public/wafi.jpeg";
 import dbtLogo from "@/public/dbt.jpg";
 
 export default function Home() {
