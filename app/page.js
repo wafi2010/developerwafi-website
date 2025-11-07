@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 // Import Images
-import wafiPic from "@/public/wafi-.jpg";
+import wafiPic from "@/public/wafi-1.jpg";
 import wafiImage from "@/public/wafi.jpeg";
 import dbtLogo from "@/public/dbt.jpg";
 
